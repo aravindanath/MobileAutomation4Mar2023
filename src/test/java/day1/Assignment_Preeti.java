@@ -5,3 +5,4 @@ public class Assignment_Preeti {
         System.out.println("Hello");
     }
 }
+// Adding comments
