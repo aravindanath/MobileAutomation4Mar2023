@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" parallel="tests">
+    <test name="emulator-5554">
+        <parameter name="deviceID" value="emulator-5554"/>
+        <parameter name="deviceName" value="TestDevice"/>
+        <classes>
+            <class name="learning_TestNG.TC_001"/>
+            <class name="learning_TestNG.TC_002"/>
+        </classes>
+    </test>
+    <test name="emulator-5556">
+        <parameter name="deviceID" value="emulator-5556"/>
+        <parameter name="deviceName" value="Test2"/>
+        <classes>
+            <class name="learning_TestNG.TC_002"/>
+            <class name="learning_TestNG.TC_001"/>
+        </classes>
+    </test>
+</suite>
