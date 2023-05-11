@@ -1,4 +1,4 @@
-package AKNJr;
+package aknjr;
 
 
 import io.appium.java_client.android.AndroidDriver;
