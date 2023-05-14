@@ -19,7 +19,7 @@ import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 
 public class AppLaunch_GS {
 //appium -p 4723 --use-plugins=images --allow-cors
-    AndroidDriver driver; //Global References
+   public   AndroidDriver driver; //Global References
 
     @BeforeClass
     public void setup() throws MalformedURLException {
