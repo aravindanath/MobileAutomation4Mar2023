@@ -1,6 +1,7 @@
 package mobile_day1;
 
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
@@ -19,7 +20,7 @@ import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 
 public class AppLaunch_GS {
 //appium -p 4723 --use-plugins=images --allow-cors
-   public   AndroidDriver driver; //Global References
+   public AppiumDriver driver; //Global References
 
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -27,6 +28,7 @@ public class AppLaunch_GS {
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,ANDROID);
         caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+//        caps.setCapability("orientation", "LANDSCAPE" );
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Testdevice");
         caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,"com.androidsample.generalstore");
         caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,"com.androidsample.generalstore.SplashActivity");
