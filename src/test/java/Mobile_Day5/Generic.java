@@ -22,7 +22,7 @@ public class Generic {
 
     public static void scrollAndClick(WebDriver driver, String text){
         String str =  "new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().textContains(\""+text+"\"));";
-        ((AndroidDriver)driver).findElementByAndroidUIAutomator(str).click();
+        ((AndroidDriver<?>)driver).findElementByAndroidUIAutomator(str).click();
     }
 
     public static void longPress(WebDriver driver, WebElement ele){
@@ -36,4 +36,15 @@ public class Generic {
         touchAction.tap(TapOptions.tapOptions().withElement(element(ele))).perform();
     }
 
+    public static String getOTP(String msg){
+        String otp = null;
+        for(String str : msg.split(" ")){
+            if(str.matches("\\d{5}")){
+                otp = str;
+            }else if(str.matches("\\d{4}")){
+                otp = str;
+            }
+        }
+        return otp;
+    }
 }
